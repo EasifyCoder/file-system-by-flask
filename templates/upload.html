@@ -1,0 +1,14 @@
+{%extends "index.html"%}
+
+{% block content %}
+
+    <form action = "/upload" method = "post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input class="btn btn-info" type="file" name="file" id="exampleInputFile">
+        </div>
+		<input class="btn btn-default" type = "submit" value="Upload">
+	</form>
+
+{% endblock %}

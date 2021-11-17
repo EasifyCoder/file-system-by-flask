@@ -1,0 +1,9 @@
+{%extends "index.html"%}
+
+{% block content %}
+    <!-- 接收filenames参数，取其中每一个值，两个a标签都绑定具体的文件名，实现下载和删除功能 -->
+    {% for file in filenames %}
+        <a href="/download/{{ file }}">  {{ file }}  </a>
+        <a class="btn btn-default" href="/delete/{{ file }}" role="button">Delete</a> <br />
+    {% endfor %}
+{% endblock %}
